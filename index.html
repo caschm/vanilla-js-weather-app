@@ -10,42 +10,48 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <title>Weather app</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>New York</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt="Clear"
-            />
-            12°C | °F
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>Humidity: %</li>
-              <li>Wind: %</li>
-              <li>Precipitation: %</li>
+              <li id="description">Clear</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units">°C | <a href="#">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Wind: <span id="wind"></span>km/h</li>
+                <li>Humidity: <spanm id="humidity"></spanm>%</li>
+                <li>Last updated: <span id="date"></span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <small
-        ><a
-          href="https://github.com/caschm/vanilla-js-weather-app"
-          target="_blank"
-          >Open-source code</a
+        <small
+          ><a
+            href="https://github.com/caschm/vanilla-js-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Celina</small
         >
-        by Celina</small
-      >
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
