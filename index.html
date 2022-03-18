@@ -10,6 +10,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
@@ -17,13 +23,15 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
+        <div class="heading">What's the weather in...</div>
+
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Enter a city..."
+                  placeholder="Enter a city"
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -65,12 +73,14 @@
               </ul>
             </div>
           </div>
+          <hr />
           <div class="weather-forecast" id="forecast"></div>
         </div>
         <small
           ><a
             href="https://github.com/caschm/vanilla-js-weather-app"
             target="_blank"
+            class="github"
             >Open-source code</a
           >
           by Celina</small
